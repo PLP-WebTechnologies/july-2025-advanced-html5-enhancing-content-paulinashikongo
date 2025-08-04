@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enhanced HTML5 Page with Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background-color: #f4f4f4;
+    }
+    section {
+      background: #fff;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    fieldset {
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      border-radius: 6px;
+    }
+    legend {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin: 0.5rem 0 0.2rem;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    input[type="submit"] {
+      width: auto;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to the PMS Enhanced HTML5 Page</h1>
+    <p>This page demonstrates the use of advanced HTML5 elements including lists, tables, media, and form validation.</p>
+  </header>
+
+  <section>
+    <h2>1. Organized Content with Lists</h2>
+    <h3>Unordered List: To do list</h3>
+    <ul>
+      <li>Reading the Bible</li>
+      <li>Watching Series</li>
+      <li>Learning how to code</li>
+      <li>Playing Music</li>
+    </ul>
+
+    <h3>Ordered List: Steps to write an essay</h3>
+    <ol>
+      <li>Choose a topic</li>
+      <li>Research the subject</li>
+      <li>Create an outline</li>
+      <li>Write an introduction</li>
+      <li>Develop the body paragraphs</li>
+      <li>Write the conclusion</li>
+      <li>Proofread and edit</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>2. Tabular Data</h2>
+    <table>
+      <caption>Weekly Class Schedule</caption>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Subject</th>
+          <th>Duration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monday</td>
+          <td>Web Development</td>
+          <td>2 hours</td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td>Python</td>
+          <td>2 hours</td>
+        </tr>
+        <tr>
+          <td>Thursday</td>
+          <td>Database Design & Development</td>
+          <td>2 hours</td>
+        </tr>
+        <tr>
+          <td>Friday</td>
+          <td>Startup Building</td>
+          <td>2 hours</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>3. Embedded Media</h2>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Mountain landscape" width="600" />
+      <figcaption>Sample image displayed using semantic HTML5.</figcaption>
+    </figure>
+
+    <audio controls>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
+
+
+    <video width="600" controls>
+  <source src="https://www.w3schools.com/html/movie.webm" type="video/webm" />
+  Your browser does not support the video tag.
+</video>
+
+  </section>
+
+  <section>
+    <h2>4. Complete HTML5 Form</h2>
+    <form action="#" method="post" autocomplete="on">
+      <fieldset>
+        <legend>Personal Information</legend>
+
+       <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="e.g., Paul Smith" required minlength="3" />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required placeholder="e.g., paul@example.com" />
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required />
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="">--Select--</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="nonbinary">Non-binary</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Account Details</legend>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required minlength="4" pattern="^[a-zA-Z0-9_]+$" title="Use only letters, numbers, and underscores." />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required minlength="6" />
+
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required minlength="6" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional Information</legend>
+
+        <label for="bio">Short Bio:</label>
+        <textarea id="bio" name="bio" rows="4" placeholder="Tell us something about yourself and how can we help you today..." maxlength="300"></textarea>
+
+        <label for="newsletter">Subscribe to Newsletter:</label>
+        <input type="checkbox" id="newsletter" name="newsletter" checked readonly />
+      </fieldset>
+
+      <input type="submit" value="Submit Form" />
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Paulina Shikongo Enhanced HTML5 Page. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+
+
